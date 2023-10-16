@@ -11,3 +11,5 @@ You may for example:
 - Destroy your Shapeshifter by writing something where you shouldn't have and running that firmware
 
 The writer also handles fixing the `.jic` file checksum so it works with Quartus (first time I've heard anyone solve this!). So no need to use the super slow Terasic writer with the raw binary file
+
+The offsets in the binary file seem to change once in a while, so be sure to set the offsets to match your firmware version binary format.
