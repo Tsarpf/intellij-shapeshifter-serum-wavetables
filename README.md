@@ -12,4 +12,4 @@ You may for example:
 
 The writer also handles fixing the `.jic` file checksum so it works with Quartus (first time I've heard anyone solve this!). So no need to use the super slow Terasic writer with the raw binary file
 
-The offsets in the binary file seem to change once in a while, so be sure to set the offsets to match your firmware version binary format.
+The offsets in the binary file seem to sometimes change between firmware versions, so be sure to set the offsets to match your firmware version binary format.
