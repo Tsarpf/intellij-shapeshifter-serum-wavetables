@@ -1,8 +1,3 @@
-
-
-# intellij-shapeshifter-custom-wavetables
-Helper scripts to create custom firmware binaries, and to convert serum wavetables to format compatible with Intellij Shapeshifter
-
 Created with the help of GPT-4 while very tired, so don't expect beautiful code.
 
 Use at your own risk!!! 
