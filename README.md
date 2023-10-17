@@ -34,7 +34,7 @@ The offsets in the binary file seem to sometimes change between firmware version
 - Follow the Shapeshifter manual steps to flash your new `firmware.jic` into the device.
 
 # License 
-It is permissively licensed with MIT (see LICENSE file) so you can use this code directly to build a paid app/GUI for doing the same process or something. A citation to me would of course be nice in that case.
+It is permissively licensed with MIT (see LICENSE file) so you can use this code directly to build a paid app/GUI for doing the same process or something. A citation to me would of course be nice in that case, or see below for giving me a beer.
 
 # Thanks
 If you do manage to use this or find the information useful, and you didn't break your computer or synthesizer with this, consider buying me a beer at https://www.buymeacoffee.com/tsurba
