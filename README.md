@@ -27,7 +27,8 @@ The offsets in the binary file seem to sometimes change between firmware version
 - `python3 serum_to_shapeshifter.py ./PATH/TO/FOLDER/WITH/WAVS/IN/SERUM/FORMAT`
   - This will create two files `output.shapewt`, and `names_output.bin` in the same directory as the wav files
 - `python3 wavewriter.py firmware.jic path/to/output.shapewt INDEX` replace `INDEX` by a value between 0-126 (127 index ie. 128th wave is used for controlling wave selection with Mod B input), indicating starting from where you want to place the bunch of waveforms into your Shapeshifter wave memory.
-  - Given eg. 50 as the STARTING_INDEX and targeting the Serum "Spectral" wavetable folder with 35 tables (`.wav`s), the indices 50-85 would be filled with those waveforms.
-  - Make absolutely sure you don't target some other file instead of the firmware file, as the script will just overwrite the specified part of the file without any checks whether it's actually the firmware file. So this step is _DANGEROUS_.
-- After using `wavewriter.py` you now go through your firmware file with a binary diff tool to compare it to the original firmware, and check that you didn't touch addresses outside the wave name and wave data areas. Accidentally writing somewhere else could cause your Shapeshifter to malfunction.
-- Follow the manual to flash your new `something.jic` into the device.
+  - If the sum of your selected `INDEX`+`num_of_wav_files` in the wav folder exceeds 127, the program will give an error
+  - Given eg. 50 as the INDEX and targeting the Serum "Spectral" wavetable folder with 35 tables (`.wav`s), the indices 50-85 would be filled with those waveforms.
+  - Make absolutely sure you don't target some other file instead of the firmware file, as the script will just overwrite the specified location of the file without any checks whether it's actually the firmware file. So this step is **DANGEROUS** and irreversible if applied to the wrong file.
+- To play it safe, after using `wavewriter.py` go through your firmware file with a binary diff tool to compare it to the original firmware file, and check that you didn't touch addresses outside the wave name and wave data areas. Accidentally writing somewhere else could cause your Shapeshifter to malfunction.
+- Follow the Shapeshifter manual steps to flash your new `firmware.jic` into the device.
