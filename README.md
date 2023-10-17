@@ -7,8 +7,11 @@ You may for example:
 Only tested with the 2.0.4 jic, and the offsets are calculated for that version only. Previous (or future?) firmware versions will not work, but if you understand what the scripts are doing it's easy to change and apply this to other versions.
 
 # What it is
-Two scripts, one converts a folder containing serum format wavetables/WAVs to a binary blob (along with first 6 characters of their filename)
-The writer also handles fixing the `.jic` file checksum so it works with Quartus (first time I've heard anyone solve this!). So no need to use the super slow Terasic writer with the raw EPCS dump
+Two scripts, 
+- one converts a folder containing serum format wavetables/WAVs to a binary blob (along with first 6 characters of their filenames)
+- one applies that binary blob to the firmware file. This also handles fixing the `.jic` file checksum so it works with Quartus Programmer (first time I've heard anyone solve this!). So no need to use the super slow Terasic writer with the raw EPCS dump. Writing this file takes like 1 minute.
+
+It's a relatively fast process for the conversion, firmware editing, and flashing the `.jic`.
 
 The offsets in the binary file seem to sometimes change between firmware versions, so be sure to set the offsets to match your firmware version binary format.
 
