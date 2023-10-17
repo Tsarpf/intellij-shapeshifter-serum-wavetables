@@ -1,10 +1,10 @@
 # Use at your own risk!!! 
-Only tested with the 2.0.4 jic, and the offsets are calculated for that version only. Previous firmware versions
-
 You may for example:
 - Destroy your PC OS by accidentally writing random binary stuff to the middle of a critical file on your computer
 - Destroy your Shapeshifter by writing something where you shouldn't have and running that firmware
 - I will take absolutely zero responsibility if you use this tool to brick or break your expensive eurorack module.
+
+Only tested with the 2.0.4 jic, and the offsets are calculated for that version only. Previous (or future?) firmware versions will not work, but if you understand what the scripts are doing it's easy to change and apply this to other versions.
 
 # What it is
 Two scripts, one converts a folder containing serum format wavetables/WAVs to a binary blob (along with first 6 characters of their filename)
