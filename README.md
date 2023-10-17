@@ -32,3 +32,9 @@ The offsets in the binary file seem to sometimes change between firmware version
   - Make absolutely sure you don't target some other file instead of the firmware file, as the script will just overwrite the specified location of the file without any checks whether it's actually the firmware file. So this step is **DANGEROUS** and irreversible if applied to the wrong file.
 - To play it safe, after using `wavewriter.py` go through your firmware file with a binary diff tool to compare it to the original firmware file, and check that you didn't touch addresses outside the wave name and wave data areas. Accidentally writing somewhere else could cause your Shapeshifter to malfunction.
 - Follow the Shapeshifter manual steps to flash your new `firmware.jic` into the device.
+
+# License 
+It is permissively licensed with MIT (see LICENSE file) so you can use this code directly to build a paid app/GUI for doing the same process or something. A citation to me would of course be nice in that case.
+
+# Thanks
+If you do manage to use this or find the information useful, and you didn't break your computer or synthesizer with this, consider buying me a beer at https://www.buymeacoffee.com/tsurba
